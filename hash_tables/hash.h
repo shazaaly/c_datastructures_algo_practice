@@ -17,7 +17,10 @@ typedef struct HashTable{
 
 
 H_item *create_new_item(char *key, char *value);
-HashTable *create_hash_table(int size, int count)
+HashTable *create_hash_table(int size, int count);
+void free_item(H_item *item);
+void free_table(HashTable **table);
+void print_table(HashTable *table);
 
 
 #endif
