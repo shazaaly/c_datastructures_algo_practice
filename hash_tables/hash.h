@@ -29,6 +29,7 @@ void print_table(HashTable *table);
 unsigned long djb2_hash(char *str);
 unsigned long get_index(char *key, int size);
 int insert(HashTable *table, char *key, char *value);
+LinkedList *allocateLL();
 
 
 #endif
