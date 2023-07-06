@@ -1,0 +1,5 @@
+This repository is a collection of resources for self-study of data structures and algorithms in the C programming language. It includes various implementations of common data structures and algorithms, as well as explanations and examples to help understand their usage and performance characteristics.
+
+The repository covers topics such as arrays, linked lists, stacks, queues, trees, sorting algorithms, searching algorithms, and graph algorithms. Each topic includes sample code implementations and explanations of their time and space complexity.
+
+By studying the materials in this repository, you will gain a solid foundation in data structures and algorithms in C, which are essential skills for software development, particularly in fields such as systems programming, embedded systems, and game development.
