@@ -33,16 +33,15 @@ HashTable *create_hash_table(int size)
 	return (table)
 }
 
+/*============== free items and table============*/
 
-
-
-
- /* allocating memory and setting its size, count, and items */
-
-
-
-int main(void)
+void free_item(H_item *item)
 {
+	if (item)
+	{
+		free(item->key);
+		free(item->value);
+	}
+	free(item);
 
-	return (0);
 }
