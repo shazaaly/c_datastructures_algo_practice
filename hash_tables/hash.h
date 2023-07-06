@@ -2,7 +2,7 @@
 #define HASH_H
 
 typedef struct Hash_item{
-	char *str;
+	char *key;
 	char *value
 } H_item;
 
