@@ -21,9 +21,13 @@ HashTable *create_hash_table(int size)
 	int i;
 	/*create a new hash table*/
 	HashTable *table = (HashTable*)malloc(sizeof(HashTable));
+	if (table ==NULL)
+	{
+		return (NULL);
+	}
 	table->size = size;
 	table->count = 0;
-	table->items = calloc(sizeof(H_item) * table->size);
+	table->items = (H_item*)calloc(sizeof(H_item*) * table->size);
 
 	for (i = 0; i < table->size; i++)
 	{
@@ -37,11 +41,19 @@ HashTable *create_hash_table(int size)
 
 void free_item(H_item *item)
 {
-	if (item)
-	{
-		free(item->key);
-		free(item->value);
-	}
+	free(item->key);
+	free(item->value);
 	free(item);
+}
 
+void free_table(HashTable **table)
+{
+	int i;
+
+	for (i = 0; i < table->size; i++)
+	{
+		free(table->items[i]);
+	}
+	free(table->items);
+	free(table);
 }
