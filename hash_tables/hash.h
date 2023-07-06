@@ -21,6 +21,7 @@ HashTable *create_hash_table(int size, int count);
 void free_item(H_item *item);
 void free_table(HashTable **table);
 void print_table(HashTable *table);
+unsigned long djb2_hash(char *str);
 
 
 #endif
