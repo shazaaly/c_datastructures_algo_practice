@@ -22,7 +22,7 @@ void free_item(H_item *item);
 void free_table(HashTable **table);
 void print_table(HashTable *table);
 unsigned long djb2_hash(char *str);
-unsigned long get_index(char *ket, int size);
+unsigned long get_index(char *key, int size);
 int insert(HashTable *table, char *key, char *value);
 
 
