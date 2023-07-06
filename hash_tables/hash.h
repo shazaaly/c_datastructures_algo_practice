@@ -32,7 +32,8 @@ unsigned long get_index(char *key, int size);
 int insert(HashTable *table, char *key, char *value);
 LinkedList *allocateLL();
 void freeList(LinkedList *list);
-LinkedList **create_buckets(LinkedList *table)
+LinkedList **create_buckets(LinkedList *table);
+void avoid_collisions(HashTable *table, unsigned long index, H_item *item);
 
 
 
