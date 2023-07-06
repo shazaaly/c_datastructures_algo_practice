@@ -10,8 +10,8 @@ typedef struct Hash_item{
 typedef struct HashTable{
 	// Contains an array of pointers to items.
 	item **items;
-	int size;
-	int count;
+	int size;  /* no of slots in hash table*/
+	int count; /* no of key-value pairs in hash table*/
 
 } HashTable;
 

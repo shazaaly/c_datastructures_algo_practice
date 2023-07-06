@@ -6,16 +6,30 @@
 /* allocate menory for item, item key, item value*/
 H_item *create_new_item(char *key, char *value)
 {
-	item *item = malloc(sizeof(item));
-	item->key *key = malloc(strlen(key) + 1);
-	item->key *value = malloc(strlen(value) + 1);
+	/* create pointer to a new item*/
+	item *item = (H_item*)malloc(sizeof(item));
+	item->key *key = (char*)malloc(strlen(key) + 1);
+	item->key *value = (char*)malloc(strlen(value) + 1);
+	strcpy(table->key, key);
+	strcpy(table->value, value);
 	return (item);
 }
 
 
-HashTable *create_hash_table(int size, int count)
+HashTable *create_hash_table(int size)
 {
+	int i;
+	/*create a new hash table*/
+	HashTable *table = (HashTable*)malloc(sizeof(HashTable));
+	table->size = size;
+	table->count = 0;
+	table->items = calloc(sizeof(H_item) * table->size);
 
+	for (i = 0; i < table->size; i++)
+	{
+		/* sets all the items to NULL. */
+		table->items[i] = NULL;
+	}
 	return (table)
 }
 
