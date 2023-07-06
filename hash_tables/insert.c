@@ -21,11 +21,20 @@ int insert(HashTable *table, char *key, char *value)
 			printf("Table is full");
 			free(item);  /*create create_new_item uses mallocs*/
 			return;
-
 		}
 
 		table->items[index] = item; /*insert */
 		table->count++;
+
+	}
+	else
+	{
+		/* update the value as index is not NULL*/
+		if(strcmp((current->key, key) == 0))
+		{
+			current->value = value;
+			return;
+		}
 
 	}
 
