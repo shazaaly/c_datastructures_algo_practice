@@ -15,6 +15,7 @@ typedef struct LinkedList
 typedef struct HashTable{
 	// Contains an array of pointers to items.
 	item **items;
+	LinkedList **overflow_buckets;
 	int size;  /* no of slots in hash table*/
 	int count; /* no of key-value pairs in hash table*/
 
@@ -31,6 +32,8 @@ unsigned long get_index(char *key, int size);
 int insert(HashTable *table, char *key, char *value);
 LinkedList *allocateLL();
 void freeList(LinkedList *list);
+LinkedList **create_buckets(LinkedList *table)
+
 
 
 #endif
