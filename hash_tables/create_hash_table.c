@@ -6,6 +6,9 @@
 /* allocate menory for item, item key, item value*/
 H_item *create_new_item(char *key, char *value)
 {
+	item *item = malloc(sizeof(item));
+	item->key *key = malloc(strlen(key) + 1);
+	item->key *value = malloc(strlen(value) + 1);
 	return (item);
 }
 
