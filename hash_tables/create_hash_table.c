@@ -57,3 +57,20 @@ void free_table(HashTable **table)
 	free(table->items);
 	free(table);
 }
+
+void print_table(HashTable *table)
+{
+	int i;
+	H_item *item;
+
+	for (i = 0; i < table->size; i++)
+	{
+		if (item != NULL)
+		{
+			item = table->items[i];
+			printf("Key: %s\n", item[i]->key);
+			printf("value: %s\n", item[i]->value);
+		}
+
+	}
+}
