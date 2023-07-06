@@ -6,6 +6,11 @@ typedef struct Hash_item{
 	char *value
 } H_item;
 
+typedef struct LinkedList
+{
+	H_item *item;
+    struct LinkedList *next;
+} LinkedList;
 
 typedef struct HashTable{
 	// Contains an array of pointers to items.
