@@ -19,12 +19,13 @@ typedef struct listint_s
 } listint_t;
 
 
-void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 void swap(int *xp, int *yp);
+void swapNodes(listint_t **head_ref, listint_t *node1, listint_t *node2);
+void print_list(const listint_t *list);
 void bubbleSort(int arr[], int n);
 void bubble_sort(int *array, size_t size);
-
-
+void insertion_sort_list(listint_t **list);
+void print_list(const listint_t *list);
 
 #endif
