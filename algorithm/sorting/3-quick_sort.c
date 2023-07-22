@@ -3,31 +3,32 @@
 
 int partition(int *array, size_t size, int low, int high)
 {
-    int *pivot = array + high;
-    int i = low - 1;
-    int j;
+	int *pivot = array + high;
+	int i = low - 1;
+	int j;
 
-    for (j = low; j <= high - 1; j++) {
-        if (array[j] < *pivot) {
-            i++;
-            swap(&array[i], &array[j]);
-        }
-    }
-    swap(&array[i + 1], &array[high]);
-    print_array(array, size);
-    return i + 1;
+	for (j = low; j <= high - 1; j++) {
+		if (array[j] < *pivot) {
+			i++;
+			swap(&array[i], &array[j]);
+		}
+	}
+	swap(&array[i + 1], &array[high]);
+	print_array(array, size);
+	return i + 1;
 }
 
 void partition_sort(int *array, size_t size, int low, int high)
 {
-    int pivot_index;
+	int pivot_index;
 
-    if (low < high) {
-        pivot_index = partition(array, size, low, high);
+	if (low < high)
+	{
+		pivot_index = partition(array, size, low, high);
 
-        partition_sort(array, size, low, pivot_index - 1);
-        partition_sort(array, size, pivot_index + 1, high);
-    }
+		partition_sort(array, size, low, pivot_index - 1);
+		partition_sort(array, size, pivot_index + 1, high);
+	}
 }
 
 void quick_sort(int *array, size_t size)

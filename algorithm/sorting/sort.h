@@ -3,6 +3,8 @@
 
 #include <stddef.h>  /*for size_t*/
 #include <stdbool.h>  /*for bool*/
+#include <stdio.h>
+#include <stdlib.h>
 
 
 /**
@@ -32,5 +34,7 @@ void selection_sort(int *array, size_t size);
 int partition(int *array, size_t size, int low, int high);
 void quick_sort(int *array, size_t size);
 void quick_sort_wrapper(int *array, size_t size);
+void counting_sort(int *array, size_t size);
+int getMax(int *array, size_t size);
 
 #endif
